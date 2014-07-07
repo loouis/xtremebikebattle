@@ -1,0 +1,510 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+$font: "proxima-nova",sans-serif;
+$green:#33ff00;
+
+
+$nov:"proxima-nova",sans-serif;
+
+@import "compass/reset";
+@import "global";
+@import "countdown";
+
+
+header{
+
+	.buy-tickets{
+		float:right;
+		position:fixed;
+		right:20px;
+		top:20px;
+		border-radius:6px;
+		padding:10px 16px;
+		color:white;
+		font-size: .8em;
+		text-transform: uppercase;
+		border: 3px solid $green;
+		background-color:rgba(0,0,0,0.5);
+		cursor:pointer;
+		z-index:99;
+	}
+}
+
+
+section#hero{
+	background:url(./img/hero-image.jpg) no-repeat;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	background-attachment: fixed;
+
+	position:relative;
+
+	&:after{
+		content: "";
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		height:283px;
+		z-index: 11;
+		background:url(./img/cloud.png) no-repeat;
+	}
+
+	.wrapper{
+		position:relative;
+
+		img{
+			display: block;
+		}
+
+		img.logo{
+			top:50%;
+			bottom:50%;
+			margin-top:-325px;
+			// margin:0 auto;
+			left:50%;
+			right:50%;
+			margin-left:-255px;
+			display: block;
+			position:absolute;
+			// max-width:100%;
+			// height:auto;
+		}
+
+		img.motox{
+			position:absolute;
+			top:-50px;
+		}
+	}
+}
+
+
+section#intro{
+	background:white;
+
+	.wrapper{
+		
+		h2{
+			color:black;
+			text-align: center;
+			width:80%;
+			margin: 0 auto;
+
+		}
+	}
+}
+
+
+section#team{
+	ul{
+		list-style:none;
+
+		li.team-outer-box{
+			list-style:none;
+			position:relative;
+			width:25%;
+			float:left;
+			background:red;
+			padding:35px 0;
+			font-weight: 400;
+			text-transform: uppercase;
+
+			&:after{
+				content:"\A";
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				background-color:rgba(0,0,0,.6);
+			}
+
+			img{
+				width:160px;
+				height:160px;
+				 -webkit-transition: all .5s ease;
+				     -moz-transition: all .5s ease;
+				       -o-transition: all .5s ease;
+				      -ms-transition: all .5s ease;
+				          transition: all .5s ease;
+			}
+
+			.circle-img img:hover, &:hover .circle-img img{
+				width:180px;
+				height:180px;
+			}
+
+			.title{
+				line-height: 5px;
+				text-align: center;
+				padding-top:15px;
+				font-family: $font;
+				text-transform: uppercase;
+				position:relative;
+				z-index: 10;
+				color:white;
+				font-weight: 800;
+				font-size: 1.2em;
+				
+				span{
+					font-weight: 800;
+					color:#33ff00;
+					font-size: .9em;
+				}
+			}
+
+			.circle-img{
+				width:160px;
+				height:160px;
+				border-radius:400px;
+				background:white;
+				margin:0px auto 0 auto;
+				overflow: hidden;
+				position:relative;
+				z-index: 10;
+
+			}
+		}
+	}
+
+	.jamie{
+		background: url(./img/jamie-squibb-bg.jpg) !important;
+	}
+	.kye{
+		background: url(./img/kye-forte-bg.jpg) !important;
+	}
+	.andrei{
+		background: url(./img/andrei-bg.jpg) !important;
+	}
+	.lee{
+		background: url(./img/lee-bg.jpg) !important;
+	}
+}
+
+
+
+section#event{
+	background:url(./img/cloud-with-kye.jpg) no-repeat;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	background-attachment: fixed;
+
+	.wrapper{
+		max-width:660px;
+		padding-bottom:0;
+
+		h2{
+			text-align:left !important;
+			padding-bottom:8px;
+			color:white;
+		}
+
+		.licensed-bar{
+			color:white;
+			padding-top:5px;
+			text-transform: uppercase;
+		}
+
+		.outer-border-box{
+			width:100%;
+			border:6px solid black;
+			color:white;
+
+			.inner-box{
+				background-color: black;
+				margin:10px;
+				max-width:800px;
+				padding:20px;
+				text-transform: uppercase;
+
+				h3{
+					font-size: 6.8em;
+					line-height: .8em;
+					padding-bottom:15px;
+				}
+				h4{
+					// padding-top:10px;
+					font-size: 3.3em;
+					line-height: 1em;
+				}
+				span{
+					padding-bottom:5px;
+					border-bottom: 6px solid white;
+					display:inline-block;
+				}
+				.address p{
+					font-size: 1.8em;
+				}
+			}
+		}
+		
+		.gates-open{
+			background:black;
+			color:white;
+			width:100%;
+			padding:10px 20px;
+			margin-top:20px;
+			color:$green;
+			overflow:hidden;
+			text-transform: uppercase;
+			font-weight: 800;
+			
+
+			.left-2thirds{
+				width:65%;
+				float:left;
+				font-size: 1.6em;
+			}
+
+			.right-1third{
+				width:35%;
+				float:right;
+				text-align: right;
+				padding-top:8px;
+				font-size: 1em;
+			}
+		}
+	}
+
+	.full-width{
+		width:100%;
+		margin-top:30px;
+		height:283px;
+		padding-bottom:10px;
+		// background-color:rgba(255,255,255,0.2);
+		background:url(./img/cloud.png) no-repeat;
+		overflow:hidden;
+
+		.count-container{
+			max-width:650px;
+			margin: 10px auto 0 auto;
+		}
+	}
+}
+
+section#buy-tickets{
+	background:white;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	background-attachment: fixed;
+
+	.wrapper{
+		width:60%;
+		margin: 0 auto;
+		p{
+			text-align: center;
+		}
+		.underline{
+			background-color:black;
+		}
+	}
+
+	.ticket-line-info{
+		width:100%;
+		padding:20px 0;
+		color:black;
+		font-weight: 800;
+		text-transform: uppercase;
+		background:rgba(255,255,255,0.2);
+		text-align: center;
+
+		span{
+			font-size: 2.6em;
+			line-height: 60px;
+		}
+	}
+}
+
+footer#footer{
+	background:url(./img/cloud-with-kye.jpg) no-repeat;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	background-attachment: fixed;
+
+	.bottom-cloud{
+	width:100%;
+	height:283px;
+	 -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+	// background-color:rgba(255,255,255,0.2);
+	background:url(./img/cloud.png) no-repeat;
+}
+
+
+	.wrapper{
+		.underline{
+			width:220px;
+			opacity: .3;
+		}
+		.social{
+			position:relative;
+			right:50%;
+			left:50%;
+			margin-left:-110px;
+			clear:both;
+			display:inline-block;
+
+			ul{
+				li{
+					width:60px;
+					height:60px;
+					float:left;
+					margin-right:20px;
+					fill:$green;
+
+					//fade transition
+					-webkit-transition:all .3s ease-in-out;
+					transition:all .3s ease-in-out;
+					-moz-transition:all .3s ease-in-out;
+					-o-transition:all .3s ease-in-out;
+
+					&:hover{
+						fill:black;
+						cursor:pointer;
+					}
+
+					&:nth-child(3){
+						margin-right:0 !important;
+					}
+				}
+			}
+		}
+		p{
+			text-align: center;
+			color:white;
+		}
+	}
+}
+
+
+
+
+
+
+@media screen and(max-width:800px){
+
+	li.team-outer-box{
+		.circle-img{
+			width:140px !important;
+			height:140px !important;
+		}
+	}
+}
+
+@media screen and(max-width:641px){
+	img.logo{
+		margin:0 auto;
+		top:100px !important;
+		left:0 !important;
+		bottom:200px !important;
+		margin-left:25px !important;
+		margin-top:0 !important;
+		// position:static !important;
+		max-width:100%;
+		height:auto;
+	}
+}
+
+
+
+@media screen and(max-width:620px){
+	li.team-outer-box{
+		width:50% !important;
+	}
+}
+
+
+@media screen and(max-width:641px){
+
+	// img.logo{
+	// 	margin:0 auto;
+	// 	top:100px !important;
+	// 	left:0 !important;
+	// 	bottom:200px !important;
+	// 	margin-left:25px !important;
+	// 	margin-top:0 !important;
+	// 	// position:static !important;
+	// 	max-width:100%;
+	// 	height:auto;
+	// }
+
+	.gates-open{
+		padding: 10px 10px !important;
+	}
+
+
+	section#event .full-width{
+		margin-top:0 !important;
+	}
+
+	.inner-box{
+		padding:15px 10px 10px 10px !important;
+		margin: 4px !important;
+	}
+
+	.outer-border-box .inner-box span{
+		border-bottom:0px  !important;
+		padding-bottom:0px !important;
+	}
+
+	.right-1third{
+		padding-top:4px !important;
+	}
+
+	img.motox{
+		width:250px !important
+	}
+
+	body{
+		font-size: 42.5%;
+	}
+
+	.wrapper{
+		padding-top:50px !important;
+		padding-bottom:50px !important;
+	}
+
+	#footer .wrapper{
+		padding-top:0 !important;
+	}
+
+	#event .wrapper{
+		padding-bottom:0 !important;
+	}
+	section#buy-tickets .wrapper{
+		width:100% !important;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

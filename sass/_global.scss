@@ -1,0 +1,63 @@
+
+*, *:before, *:after{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+
+}
+body{
+	font-size:62.5%;
+}
+
+//FONT STYLES
+h1{
+	font-family: $nov;
+	font-weight:800;
+	text-transform:uppercase;
+	font-size:36px;
+}
+
+h2{
+	font-family: $nov;
+	font-size:3em;
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:800;
+}
+h3,h4{
+	font-family: $nov;
+	font-size:30px;
+	text-transform:uppercase;
+	font-weight:800;
+}
+
+
+p{
+	font-family: $nov;
+	font-size:1.8em;
+	line-height:1.4em;
+}
+
+
+section{
+	width:100%;
+	overflow:hidden;
+	height:auto;
+	background:none;
+}
+
+.wrapper{
+	max-width:1024px;
+	padding:60px 15px;
+	height:auto;
+	overflow:hidden;
+	margin: 0 auto;
+}
+
+
+.underline{
+	height:1px;
+	max-width:300px;
+	background-color:white;
+	margin: 20px auto;		
+}
