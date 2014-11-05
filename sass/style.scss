@@ -298,24 +298,123 @@ section#buy-tickets{
 	background-attachment: fixed;
 
 	.wrapper{
-		width:60%;
 		margin: 0 auto;
 		p{
+			width:62%;
+			margin: 0 auto;
 			text-align: center;
 		}
 		.underline{
 			background-color:black;
 		}
+
+
+		.payemnt-logos{
+			margin:20px auto 40px auto;
+			max-width:200px;
+
+			img{
+				display: block;
+				margin:0 auto;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				width:100%;
+			}
+		}
+
+
+		ul.prices{
+			clear:both;
+			margin:30px 0;
+			overflow: hidden;
+
+			li{
+				padding:0px 0 20px 0;
+				width:30.64%;
+				border:6px solid black;
+				margin-right:4%;
+				font-family: $font !important;
+
+				&:nth-child(3){
+					margin-right:0 !important;
+				}
+
+				.circle-price-icon{
+					width:150px;
+					height:150px;
+					border-radius:150px;
+					margin: 15px auto;
+					border:3px solid $green;
+
+				}
+
+				p.money-description{
+					font-size:13px;
+					width:100%;
+					margin-top:5px;
+					padding:10px 0 0px 0;
+					text-align: left;
+					color: #ADADAD;
+				}
+
+				.padding-container{
+					padding:0 15px;
+				}
+
+				.paypal-options-dropdown{
+					margin-top:20px;
+				}
+				.prices-title{
+					font-size: 14px;
+					font-weight: 700;
+					background:black;
+					color:white;
+					padding:10px;
+					padding-left: 15px;
+
+					span{
+						font-size: 34px;
+						color:$green;
+						text-align: left;
+					}					
+				}
+
+				input{
+					float:right;
+				}
+
+				table{
+					font-family: $font !important;
+					float:left;
+				}
+
+				select{	
+					background:transparent;
+					font-family: $font !important;
+				   border: 2px solid black;
+				   width:120px;
+				   font-size: 16px;
+				   line-height: 1;
+				   height: 36px;
+				   
+				}
+
+				option{
+					font-family: $font !important;
+				}
+			}
+		}
 	}
 
 	.ticket-line-info{
 		width:100%;
-		padding:20px 0;
+		padding:50px 0 20px 0;
 		color:black;
 		font-weight: 800;
 		text-transform: uppercase;
-		background:rgba(255,255,255,0.2);
 		text-align: center;
+		clear:both;
 
 		span{
 			font-size: 2.6em;
@@ -403,6 +502,26 @@ footer#footer{
 			height:140px !important;
 		}
 	}
+
+	section#buy-tickets .wrapper .payemnt-logos{margin-bottom: 0px !important; }
+	section#buy-tickets .ticket-line-info{
+		padding-top:0px;
+	}
+}
+
+@media screen and(max-width:760px){
+	ul.prices{
+		li{
+			width:100% !important;
+			margin-top:40px;
+			float:left !important;
+
+			select{ width:500px !important;	}
+		}
+	}
+	section#buy-tickets .wrapper ul.prices{
+		margin-top:0px;
+	}
 }
 
 @media screen and(max-width:641px){
@@ -417,6 +536,8 @@ footer#footer{
 		max-width:100%;
 		height:auto;
 	}
+
+	ul.prices{li{ select{ width:300px !important;	}}}
 }
 
 
@@ -493,11 +614,73 @@ footer#footer{
 
 
 
+@media screen and(max-width:441px){
+
+	body{
+		font-size: 50.5%;
+	}
+
+
+	ul.prices{
+		li{ 
+			select{ 
+				width:230px !important;	
+			}
+			input{
+				float:right !important;
+			}
+		}
+	}
+
+	section#buy-tickets{
+		.wrapper{
+			p{
+				width:100%;
+				padding-left:15px;
+				padding-right:15px;
+			}
+		}
+	}
+}
 
 
 
+@media screen and(max-width:400px){
+	ul.prices{
+		li{ 
 
+			margin-top: 20px;
+			
+			input{
+				margin-top:15px;
+				clear:both !important;
+				float:left !important;
+			}
+		}
+	}
 
+	.underline{
+		width:100px !important;
+	}
+
+	.payemnt-logos{
+		width:200px !important;
+	}
+	
+	section#buy-tickets .wrapper ul.prices{ margin-top:0 !important;}
+
+	section#event .wrapper .outer-border-box .inner-box h3{font-size:5.2em !important;}
+
+	section#event .wrapper .gates-open .right-1third, section#event .wrapper .gates-open .left-2thirds{
+		width:100% !important;
+		float:left;
+		text-align:left;
+	}
+
+	.right-1third{padding-top:0px;}
+
+	section#intro .wrapper h2{width:90%;}
+}
 
 
 
